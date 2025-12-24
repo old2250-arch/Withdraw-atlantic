@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>ATLANTIC WITHDRAW</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h2 class="logo">ATLANTIC</h2>
+  <button onclick="showSaldo()">CEK SALDO ATLANTIC</button>
+  <button onclick="showWithdraw()">WITHDRAW SALDO</button>
+</div>
+
+<div class="content">
+  <h1><span class="blue">ATLANTIC</span> WITHDRAW</h1>
+
+  <!-- CEK SALDO -->
+  <div id="saldoBox" class="box hidden">
+    <h3>Cek Saldo Atlantic</h3>
+    <input id="apiKey" placeholder="Masukkan API Atlantic">
+    <button onclick="cekSaldo()">Cek Saldo</button>
+    <p id="saldoResult"></p>
+  </div>
+
+  <!-- WITHDRAW -->
+  <div id="withdrawBox" class="box hidden">
+    <h3>Withdraw Saldo</h3>
+
+    <input id="token" placeholder="Masukkan Token">
+    
+    <select id="layanan">
+      <option value="DANA">DANA</option>
+      <option value="OVO">OVO</option>
+      <option value="GOPAY">GOPAY</option>
+      <option value="SHOPEEPAY">SHOPEEPAY</option>
+    </select>
+
+    <input id="nomor" placeholder="Nomor E-Wallet">
+    <input id="nominal" type="number" placeholder="Minimal 5000">
+
+    <button onclick="withdraw()">Withdraw</button>
+    <p id="wdResult"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
